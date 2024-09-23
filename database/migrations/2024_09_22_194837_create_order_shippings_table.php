@@ -24,7 +24,7 @@ return new class extends Migration
             $table->unsignedInteger('shipping_area_id')->nullable();
             $table->integer('post_code')->nullable();
 
-            $table->foreign('shipping_areas')->references('id')->on('districts');
+            $table->foreign('shipping_area_id')->references('id')->on('districts');
             $table->timestamps();
         });
     }
