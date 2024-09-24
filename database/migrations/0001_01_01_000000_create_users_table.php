@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             // $table->unsignedInteger('type_id');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->tinyInteger('status');
             $table->enum('user_type',[AdminType::ADMIN, AdminType::DELIVERY_MAN])->default(AdminType::ADMIN)->nullable();
             $table->rememberToken();
